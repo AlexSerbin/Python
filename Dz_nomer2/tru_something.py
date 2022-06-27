@@ -19,6 +19,49 @@
 # #z =''.join([str(value) for value in b[1]])
 # print(''.join([str(value) for value in b[1]]))
 # print(b[2])
+from pprint import pprint
 
-lst = ["1","2","3","4"]
-print(' sdsd '.join(lst))
+
+class Demo:
+    a = 0
+    b = 0
+    c = 0
+    def __init__(self,A,B,C):
+        self.a = A
+        self.b = B
+        self.c = C
+    def display(self):
+        print(self.a, self.b, self.c)
+    def sosat(self, x):
+        x = x + 1
+        return x
+
+x = 0
+class Newdemo(Demo):
+    d = 0
+    x = 0
+    def __init__(self,A,B,C,D,):
+        self.d = D
+
+        super().__init__(A,B,C)#super to call super Class
+        #The __init__() Method
+        super().sosat(x)
+
+    def display(self):
+        print(self.a, self.b, self.c,self.d)
+
+B1 = Demo(12,34,56)
+print("Contents of Base Class:")
+B1.display()
+D1 = Newdemo(1,2,3,4)
+print("Contents of Derived Class:")
+D1.display()
+print(D1.sosat(4))
+
+print(D1.__class__.__doc__)
+
+
+def f(x) -> 1111:
+    return x
+
+print(f.__annotations__)
