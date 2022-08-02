@@ -65,3 +65,11 @@ def f(x) -> 1111:
     return x
 
 print(f.__annotations__)
+
+
+def enlight(hope: bool):
+    return print('Lumos -', 'there is a hope' if hope else 'No hope')
+
+enlight(True)
+
+#print('Lumos -', enlight(True))
